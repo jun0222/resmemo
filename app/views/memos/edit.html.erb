@@ -1,0 +1,10 @@
+<div class="container">
+<h3>メモ編集ページ</h3>
+<%= form_tag("/memos/"+@memo.id.to_s,:method => :patch) do %>
+  <%= label_tag "form_title", "Title" %>
+  <%= text_field :memos, :title, id:"form_title", class:"form-control", placeholder: "title" %>
+  <%= label_tag "form_content", "Content" %>
+  <%= text_field :memos, :body, id:"form_content", class:"form-control", placeholder: "content"%>
+  <%= submit_tag "Create",class:"btn btn-primary" %>
+</div>
+<% end %>
